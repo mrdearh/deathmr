@@ -1,0 +1,22 @@
+import datetime
+
+def generate_message():
+    # Mensagem personalizada
+    message = """
+    Olá, este é um arquivo gerado automaticamente para mostrar
+    como você pode usar scripts no seu repositório. 
+    Data e hora de geração:
+    """
+
+    # Adicionando a data e hora atual
+    now = datetime.datetime.now()
+    message += now.strftime("%Y-%m-%d %H:%M:%S")
+
+    # Salvando em um arquivo
+    with open("message.txt", "w") as file:
+        file.write(message)
+
+    print("Arquivo 'message.txt' criado com sucesso!")
+
+if __name__ == "__main__":
+    generate_message()
